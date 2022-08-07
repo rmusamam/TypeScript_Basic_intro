@@ -1,7 +1,5 @@
 "use strict";
-function calculate(income, taxYear = 2022) {
-    if (taxYear < 2022)
-        return income * 1.2;
-    return income * 1.3;
-}
+let employee = { id: 1, name: "usama" };
+let student = { id: 3, cnic: '' };
+student.cnic = '233';
 //# sourceMappingURL=index.js.map
