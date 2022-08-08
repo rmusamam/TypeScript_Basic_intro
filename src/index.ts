@@ -1,8 +1,23 @@
-//Literal (exact,specific)
+//nullable Types
+// function greet(name:string){
+//   console.log(name.toUpperCase())
+// }
+// greet (null) issue raise that toUpperCase() can't process null
 
-type Quantity = 50|100
 
-let quantity: Quantity =50 
+// function greet(name:string|null){//union type 
+//   if(name)
+//     console.log(name.toUpperCase())
+//   else
+//     console.log('hello')  
+//   }
+//   greet(undefined)now this will cause issue 
 
-type Gender = ('m'|'M')|('f'|'F')
-let gender:Gender='M'
+function greet(name:string|null|undefined){//union type 
+  if(name)
+    console.log(name.toUpperCase())
+  else
+    console.log('hello')  
+  }
+  
+  greet("usama")
