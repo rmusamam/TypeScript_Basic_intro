@@ -1,13 +1,15 @@
-//Union Type
-function kgToLbs (weight: number|string):number{
-  if (typeof weight === 'number'){
-    console.log(weight)
-    return weight*2.2
-  }
-  else{
-    return parseInt(weight)*2.2
-  }
+//Intersection Type
+type draggable={
+  drag:()=>void
+}
 
-  kgToLbs(5)
-    
+type resizable= {
+  resize:()=>void
+}
+
+type UIWidget=draggable & resizable
+
+let textBox:UIWidget={
+  drag:()=>{},
+  resize:()=>{}
 }
