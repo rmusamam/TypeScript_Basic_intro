@@ -1,5 +1,9 @@
 "use strict";
-let employee = { id: 1, name: "usama" };
-let student = { id: 3, cnic: '' };
-student.cnic = '233';
+let employee = {
+    id: 1,
+    name: "usama",
+    retire: (date) => {
+        console.log(date);
+    },
+};
 //# sourceMappingURL=index.js.map

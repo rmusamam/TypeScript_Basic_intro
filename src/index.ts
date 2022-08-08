@@ -1,11 +1,15 @@
-//Object
-let employee:{id:number,name:string}={id:1,name:"usama"}
+//Aliases
 
-let student:{
-    readonly id:number,
-    cnic?:string
-}={
-    id:3,
-    cnic:''
-}
-student.cnic='233'
+type Employee= {
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
+} 
+
+let employee: Employee = {
+id: 1,
+  name: "usama",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
