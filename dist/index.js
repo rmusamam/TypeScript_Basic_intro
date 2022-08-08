@@ -1,12 +1,4 @@
 "use strict";
-function kgToLbs(weight) {
-    if (typeof weight === 'number') {
-        console.log(weight);
-        return weight * 2.2;
-    }
-    else {
-        return parseInt(weight) * 2.2;
-    }
-    kgToLbs(5);
-}
+let quantity = 50;
+let gender = 'M';
 //# sourceMappingURL=index.js.map

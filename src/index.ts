@@ -1,15 +1,8 @@
-//Intersection Type
-type draggable={
-  drag:()=>void
-}
+//Literal (exact,specific)
 
-type resizable= {
-  resize:()=>void
-}
+type Quantity = 50|100
 
-type UIWidget=draggable & resizable
+let quantity: Quantity =50 
 
-let textBox:UIWidget={
-  drag:()=>{},
-  resize:()=>{}
-}
+type Gender = ('m'|'M')|('f'|'F')
+let gender:Gender='M'
