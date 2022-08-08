@@ -1,23 +1,26 @@
-//nullable Types
-// function greet(name:string){
-//   console.log(name.toUpperCase())
-// }
-// greet (null) issue raise that toUpperCase() can't process null
+//optional chaining 
+type Customer={
+  birthday?:Date
+};
+
+function getCustomer(id:number): Customer|null|undefined{
+  return id===0 ? null: {birthday:new Date()}
+}
 
 
-// function greet(name:string|null){//union type 
-//   if(name)
-//     console.log(name.toUpperCase())
-//   else
-//     console.log('hello')  
-//   }
-//   greet(undefined)now this will cause issue 
+let customer= getCustomer(0)
+// if(customer !== null && customer !== undefined)
+//   console.log(customer.birthday)  we can also use optional 
 
-function greet(name:string|null|undefined){//union type 
-  if(name)
-    console.log(name.toUpperCase())
-  else
-    console.log('hello')  
-  }
-  
-  greet("usama")
+// console.log(customer?.birthday)
+
+console.log(customer?.birthday?.getFullYear)
+
+
+//optional element access operator
+//customers?.[0]
+
+//optional call
+
+let log: any = null
+log?.('a')
